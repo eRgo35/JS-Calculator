@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>//window.open('main/main.html', 'popup', 'noresizable,width=312,height=485');</script>
+    <link rel="shortcut icon" type="image/png" href="main/libraries/style/icon.png" />
+    <link rel="icon" type="image/png" href="main/libraries/style/icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <style>
+        ::selection {
+            background: transparent;
+        }
+
+        ::-moz-selection {
+            background: transparent;
+        }
+
+        html {
+            background: #ee0979;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ee0979, #ff6a00);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ee0979, #ff6a00);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        html,
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        div#info {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            font-size: 1.15em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        div#button {
+            position: relative;
+            font-size: 28pt;
+            border: 3px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: color 1s ease-in-out;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1), color 0.3s cubic-bezier(.25, .8, .25, 1);
+            overflow: hidden;
+        }
+
+        div#button::before {
+            content: "";
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: -80px;
+            top: -185px;
+            z-index: -1;
+            background: white;
+            transition: all 0.8s cubic-bezier(.73, .7, 0, .81);
+            border-radius: 90%;
+            transform: scale(0);
+        }
+
+        div#button:hover:before {
+            transform: scale(2);
+        }
+
+        div#button:hover {
+            font-weight: bold;
+            color: #ff3c00;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            transition: box-shadow 0.5s ease-in-out, color 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        div#button:active {
+            box-shadow: unset;
+            transition: box-shadow 0.1s ease-in-out;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100px;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        div#button:hover img {
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="button" onclick="window.open('main/main.html','popup','noresizable,width=312,height=485');">
+        <img src="main/libraries/style/icon.png" /> <span>Calculator</span>
+    </div>
+    <div id="info">
+        Make sure to allow popup windows on this website.<br />
+        &copy; 2019 Michał Czyż All Rights Reserved
+    </div>
+</body>
+
+</html>

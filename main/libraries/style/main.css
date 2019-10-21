@@ -1,0 +1,193 @@
+/* Page Styles */
+::selection {
+    background: coral;
+}
+::-moz-selection {
+    background: coral;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand;
+}
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px calc(100% - 200px);
+    height: 100%;
+}
+keypad {
+    display: grid;
+    grid-template-columns: 70% calc(100% - 70% - 30px) 30px;
+    height: 100%;
+    position: relative;
+}
+#shadow {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 2px;
+    background: #000000;
+    filter: blur(2px);
+    opacity: 0.5;
+}
+basic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    background: #434343;
+    position: relative;
+}
+operations {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+    background: #636363;
+}
+slider {
+    display: block;
+    height: 100%;
+}
+div#menu {
+    display: table-cell;
+    text-align: left;
+}
+div#menu i {
+    padding: 10px;
+    cursor: pointer;
+}
+div#menu-bar i {
+    padding: 10px;
+    cursor: pointer;
+}
+div#history {
+    display: table-cell;
+    text-align: right;
+}
+div#history i {
+    padding: 10px;
+    cursor: pointer;
+}
+div#history-bar i {
+    padding: 10px;
+    cursor: pointer;
+}
+div#menu-bar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    background: lightgray;
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    z-index: 5;
+}
+div#history-bar {
+    position: absolute;
+    bottom: calc(-100% - 200px);
+    background: lightgray;
+    width: 100%;
+    height: calc(100% - 200px);
+    text-align: right;
+    z-index: 5;
+}
+#dimmer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    opacity: 0.8;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+#dimmer2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: 0.5;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+#dimmer3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+nav {
+    display: table;
+    width: 100%;
+}
+button.arrow {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+input#screen {
+    width: 95%;
+    outline: none;
+    font-size: 60pt;
+    text-align: right;
+    border: none;
+    margin-right: 10px;
+}
+input#preview {
+    width: 95%;
+    outline: none;
+    font-size: 20pt;
+    text-align: right;
+    border: none;
+    color: #6b6a6a;
+    margin-right: 10px;
+}
+div#complex {
+    display: grid;
+    grid-template-columns: 30px calc(100% - 30px);
+    position: absolute;
+    right: -80%;
+    bottom: 0;
+    height: calc(100% - 200px);
+    width: 80%;
+    background: lightcoral;
+}
+div#complex-keypad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20pt;
+}
+.numbers, .triggers, .basic-stuff {
+    color: white;
+}
+button.arrow {
+    background-color: lightcoral !important;
+}
