@@ -43,46 +43,7 @@
 <body>
     <app>
         <screen>
-            <div id="menu-bar">
-                <i class="material-icons" id="menu-close">menu</i>
-                <h4>Calculator</h4>
-                <ul>
-                    <li>Standard</li>
-                    <li>Scientific</li>
-                    <li>Programmer</li>
-                    <li>Date Calculation</li>
-                </ul>
-                <h4>Converter</h4>
-                <ul>
-                    <li>Currency</li>
-                    <li>Volume</li>
-                    <li>Length</li>
-                    <li>Weight and Mass</li>
-                    <li>Temperature</li>
-                    <li>Energy</li>
-                    <li>Area</li>
-                    <li>Speed</li>
-                    <li>Time</li>
-                    <li>Power</li>
-                    <li>Data</li>
-                    <li>Pressure</li>
-                    <li>Angle</li>
-                </ul>
-                <button>About</button>
-            </div>
-            <div id="history-bar">
-                
-            </div>
-            <div id="dimmer"></div>
-            <div id="dimmer3"></div>
-            <nav>
-                <div id="menu">
-                    <i class="material-icons" id="menu-open">menu</i>
-                </div>
-                <div id="history">
-                    <i class="material-icons" id="history-open">history</i>
-                </div>
-            </nav>
+            <nav></nav>
             <input type="text" id="screen" maxlength="20" value="">
             <input type="text" id="preview" maxlength="20" value="" readonly>
         </screen>
@@ -90,54 +51,29 @@
             <div id="shadow"></div>
             <basic>
                 <div id="dimmer2"></div>
-                <button class="button numbers" onclick="Input('7');">7</button>
-                <button class="button numbers" onclick="Input('8');">8</button>
-                <button class="button numbers" onclick="Input('9');">9</button>
-                <button class="button numbers" onclick="Input('4');">4</button>
-                <button class="button numbers" onclick="Input('5');">5</button>
-                <button class="button numbers" onclick="Input('6');">6</button>
-                <button class="button numbers" onclick="Input('1');">1</button>
-                <button class="button numbers" onclick="Input('2');">2</button>
-                <button class="button numbers" onclick="Input('3');">3</button>
-                <button class="button basic-stuff" onclick="Input('.');">.</button>
-                <button class="button numbers" onclick="Input('0');">0</button>
-                <button class="button triggers" onclick="Ans();">=</button>
+                <button class="button numbers" onclick="input('7')">7</button>
+                <button class="button numbers" onclick="input('8')">8</button>
+                <button class="button numbers" onclick="input('9')">9</button>
+                <button class="button numbers" onclick="input('4')">4</button>
+                <button class="button numbers" onclick="input('5')">5</button>
+                <button class="button numbers" onclick="input('6')">6</button>
+                <button class="button numbers" onclick="input('1')">1</button>
+                <button class="button numbers" onclick="input('2')">2</button>
+                <button class="button numbers" onclick="input('3')">3</button>
+                <button class="button basic-stuff" onclick="input('.')">.</button>
+                <button class="button numbers" onclick="input('0')">0</button>
+                <button class="button triggers" onclick="answer()">=</button>
             </basic>
             <operations>
-                <button class="button triggers" id="back" onclick="Back();"><span style="font-size: 13pt;">DEL</span></button>
-                <button class="button triggers" id="clear" onclick="Clear();" style="display: none;">C</button>
-                <button class="button basic-stuff" onclick="Input('/');">&divide;</button>
-                <button class="button basic-stuff" onclick="Input('*');">&times;</button>
-                <button class="button basic-stuff" onclick="Input('-');">-</button>
-                <button class="button basic-stuff" onclick="Input('+');">+</button>
+                <button class="button triggers" id="back" onclick="bck()"><span style="font-size: 13pt;">DEL</span></button>
+                <button class="button triggers" id="clear" onclick="cls()" style="display: none;">C</button>
+                <button class="button basic-stuff" onclick="input('/')">&divide;</button>
+                <button class="button basic-stuff" onclick="input('*')">&times;</button>
+                <button class="button basic-stuff" onclick="input('-')">-</button>
+                <button class="button basic-stuff" onclick="input('+')">+</button>
             </operations>
-            <slider>
-                <button class="arrow" id="complex-open"><i class="material-icons">chevron_left</i></button>
-            </slider>
+            <slider id="bar"></slider>
         </keypad>
-        <div id="complex">
-            <div id="close-arrow">
-                <button class="arrow" id="complex-close"><i class="material-icons">chevron_right</i></button>
-            </div>
-            <div id="complex-keypad">
-                <button class="button complex-stuff">±</button>
-                <button class="button complex-stuff">rad</button>
-                <button class="button complex-stuff" style="display: none">∘</button>
-                <button class="button complex-stuff">%</button>
-                <button class="button complex-stuff">sin</button>
-                <button class="button complex-stuff">cos</button>
-                <button class="button complex-stuff">tan</button>
-                <button class="button complex-stuff">ln</button>
-                <button class="button complex-stuff">log</button>            
-                <button class="button complex-stuff">√</button>
-                <button class="button complex-stuff">&#x003C0;</button>
-                <button class="button complex-stuff">e</button>
-                <button class="button complex-stuff">^</button>
-                <button class="button complex-stuff">(</button>
-                <button class="button complex-stuff">)</button>
-                <button class="button complex-stuff">!</button>
-            </div>
-        </div>
     </app>
 </body>
 
